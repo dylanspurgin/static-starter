@@ -1,0 +1,30 @@
+.page-section {
+    padding-right: rem(0);
+    padding-left: rem(0);
+
+    @include max-screen(breakpoint(xs, max)) {
+        padding-top: rem(3);
+        padding-bottom: rem(3);
+    }
+    @include min-screen(breakpoint(sm)) {
+        padding-top: rem(6);
+        padding-bottom: rem(6);
+    }
+
+    &.is-tiny {
+        padding-top: calc(#{rem(-3)} * 2);
+        padding-bottom: calc(#{rem(-3)} * 2);
+    }
+}
+
+.page-section__heading {
+    margin-top: 0;
+    margin-bottom: rem(4);
+
+    @include max-screen(breakpoint(xs, max)) {
+        text-align: center;
+    }
+    @include min-screen(breakpoint(sm)) {
+        text-align: left;
+    }
+}

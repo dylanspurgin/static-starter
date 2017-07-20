@@ -1,0 +1,73 @@
+.ojai-button {
+
+    // Resets
+    appearance: none;
+    outline: none !important; // prevent outline from :focus
+    user-select: none; // to prevent text hightlights inside buttons
+    margin: 0;
+    text-decoration: none !important;
+    border: 0;
+    background: none;
+    background-color: $ojai-highlight-color;
+    color: $ojai-text-color-inverse !important;
+
+    // Defaults
+    overflow: hidden; // prevent ripple effect from leaking
+    position: relative; // for positioning radio/check icons
+    display: inline-block;
+    white-space: nowrap;
+    cursor: pointer;
+    font-family: font(sans);
+    line-height: 1;
+    text-align: center;
+    border-radius: 0;
+    box-shadow: none;
+    transition: all 0.3s;
+
+    &>* {
+        white-space: nowrap;
+    }
+
+    &:disabled,
+    &.is-disabled {
+        opacity: 0.65;
+        cursor: not-allowed;
+    }
+
+    // Sizing
+    padding: rem(-1) rem(1);
+    font-size: responsive rem(0) rem(1);
+    font-range: breakpoint(xs, max) breakpoint(xl);
+
+    &.is-small {
+        padding: rem(-2) rem(0);
+        font-size: responsive rem(-1) rem(0);
+        font-range: breakpoint(xs, max) breakpoint(xl);
+    }
+
+    &.is-block {
+        display: block;
+        width: 100%;
+    }
+
+    @include max-screen(breakpoint(xs, max)) {
+
+        &.is-block--xs {
+            display: block;
+            width: 100%;
+            max-width: 320px;
+        }
+        &.is-centered--xs {
+            margin-right: auto;
+            margin-left: auto;
+        }
+    }
+
+    &:hover {
+        background-color: $ojai-highlight-hover-color;
+        text-decoration: none; // prevent buttons from inheriting text decoration
+    }
+
+
+
+}

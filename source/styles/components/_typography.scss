@@ -1,0 +1,89 @@
+:root {
+    // font-size: 87.5%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    color: $ojai-text-color;
+    font-family: font(sans);
+    font-weight: 400;
+    font-size: responsive rem(0) rem(1);
+    font-range: breakpoint(xs, max) breakpoint(xl);
+    line-height: 1.5;
+    background: white;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+}
+
+::selection {
+    // color: palette(primary, bright);
+    // background-color: palette(gray, xx-dark);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: rem(-3);
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: responsive rem(5) rem(7);
+    font-range: breakpoint(xs, max) breakpoint(xl);
+}
+h2 {
+    font-size: responsive rem(4) rem(6);
+    font-range: breakpoint(xs, max) breakpoint(xl);
+}
+h3 {
+    font-size: responsive rem(3) rem(4);
+    font-range: breakpoint(xs, max) breakpoint(xl);
+}
+h4 {
+    font-size: responsive rem(2) rem(3);
+    font-range: breakpoint(xs, max) breakpoint(xl);
+}
+h5, h6 {
+    font-size: responsive rem(1) rem(2);
+    font-range: breakpoint(xs, max) breakpoint(xl);
+}
+
+p, ul, ol, dl, table, blockquote, li, dt, dd {
+    margin-top: rem(0);
+    margin-bottom: 0;
+}
+
+%Ojailink {
+    cursor: pointer;
+    color: $ojai-link-color;
+    text-decoration: underline;
+
+    &:focus {
+        // outline-color: ;
+    }
+    &:hover {
+        color: palette(primary, dark);
+        text-decoration: none;
+    }
+}
+
+a[href] {
+    @extend %Ojailink;
+}
+
+hr {
+    // <hr> reset
+    margin: rem(0) 0;
+    border: 0;
+    border-top: 1px solid rgba(black, 0.5);
+
+    &.is-tiny {
+        margin: rem(-3) 0;
+    }
+    &.is-small {
+        margin: rem(-1) 0;
+    }
+    &.is-large {
+        margin: rem(5) 0;
+    }
+}

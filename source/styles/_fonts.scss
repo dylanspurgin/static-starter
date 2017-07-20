@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,300i,400,700,800');
+
+$sans: 'Raleway', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+$sansBold: 'Raleway Bold', 'Helvetica Neue Bold', Helvetica, Arial, 'Lucida Grande', sans-serif;
+
+$fonts: (
+    sans: $sans
+);
+
+@function font($font) {
+    @return map-get($fonts, $font);
+}
+
+
+@mixin sans-serif () {
+  font-family: 'Gotham HTF Book', 'Source Sans Pro', sans-serif;
+}

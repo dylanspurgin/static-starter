@@ -1,0 +1,58 @@
+.ojai-input__wrapper {
+    position: relative; // for positioning the psuedo :focus glow on inner-label
+
+    border-radius: 2px;
+    border: 1px solid $ojai-light-gray;
+    background-color: white;
+
+    @include max-screen(breakpoint(xs, max)) {
+        margin-top: rem(-3);
+    }
+
+    display: flex;
+    align-items: stretch;
+    flex-row: nowrap;
+    justify-content: space-between;
+}
+
+.ojai-input {
+    outline: none !important;
+    margin: 0 0 rem(1) 0;
+    border: solid 1px $ojai-light-gray;
+    background: none;
+    background-image: none;
+
+    // pull this above the psuedo :focus glow on
+    // .inner-label for clickability
+    position: relative;
+    z-index: 2;
+
+    // default styling
+    flex: 1 1 auto;
+    width: 100%;
+    padding: rem(-3) rem(-1);
+    color: $ojai-text-color;
+    font-family: mix-system-fonts();
+    font-size: rem(2);
+
+    &:focus {
+        background-color: white;
+        background-image: none;
+    }
+
+    // hide the number "spinner"
+    @at-root input[type='number']#{&} {
+        -moz-appearance: textfield;
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button,
+        &::-webkit-clear-button {
+            display: none;
+            -webkit-appearance: none;
+            margin: 0;
+        }
+    }
+
+    &::placeholder {
+        color: $ojai-light-gray;
+    }
+}

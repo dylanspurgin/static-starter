@@ -1,0 +1,95 @@
+---
+title: Starter Title
+description: Starter description description description description description description description description
+heroImg: /images/hero.png
+alist:
+    - heading: Heading 1
+      copy: Copy copy
+    - heading: Heading 2
+      copy: Copy copy
+    - heading: Heading 3
+      copy: Copy copy
+
+nav:
+    - name: Products
+      subnav:
+          - name: Product Category 1
+            subnav:
+                - name: Product 1-1
+                  link: /product-n
+                - name: Product 1-1
+                  link: /product-n
+                - name: Product 1-1
+                  link: /product-n
+                - name: Product 1-1
+                  link: /product-n
+                - name: Product 1-1
+                  link: /product-n
+          - name: Product Category 2
+            subnav:
+                - name: Product 1-1
+                  link: /product-n
+                - name: Product 1-1
+                  link: /product-n
+                - name: Product 1-1
+                  link: /product-n
+                - name: Product 1-1
+                  link: /product-n
+                - name: Product 1-1
+                  link: /product-n
+          - name: Product Category 2
+            subnav:
+                - name: Product 1-1
+                  link: /product-n
+                - name: Product 1-1
+                  link: /product-n
+                - name: Product 1-1
+                  link: /product-n
+                - name: Product 1-1
+                  link: /product-n
+                - name: Product 1-1
+                  link: /product-n
+    - name: Services
+      subnav:
+          - name: Service 1
+          - link: /service-one
+          - name: Service 2
+          - link: /service-two
+          - name: Service 3
+          - link: /service-three
+    - name: Contact
+      link: /contact
+
+heroHeading: Welcome to our site
+heroButtonText: See more
+
+modalTriggerText: Show modal
+modalTitle: Starter Title
+modalDescription: Starter description description description description description description description description
+
+copyright: Copyright 2018
+---
+{{> 'hero/hero' }}
+
+<section class="page-section">
+    <div class="container">
+        <div class="row center-xs has-no-gutter">
+            <div class="col-xs-12 col-md-4">
+                <a href="#" class="modal-target" data-modal-target="example-modal">{{{modalTriggerText}}}</a>
+            </div>
+        </div>
+</section>
+
+<section class="page-section">
+    <div class="container">
+        <div class="row center-xs has-no-gutter">
+            <div class="col-xs-12 col-md-4">
+                {{#each alist}}
+                    <h2 data-font-size="-1">{{{heading}}}</h2>
+                    <p data-font-size="-1">{{{copy}}}</p>
+                {{/each}}
+            </div>
+        </div>
+</section>
+
+{{> 'modal/modal-example'}}

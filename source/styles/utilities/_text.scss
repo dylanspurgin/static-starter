@@ -1,0 +1,43 @@
+// text alignment
+.u-align {
+
+    &--left { text-align: left !important; }
+    &--right { text-align: right !important; }
+    &--center { text-align: center !important; }
+}
+
+// text casing
+.u-capitalize     { text-transform: capitalize; }
+.u-uppercase      { text-transform: uppercase; }
+.u-lowercase      { text-transform: lowercase; }
+
+// text emphasis
+.u-normal         { font-weight: normal; letter-spacing: 0; }
+.u-thin           { font-weight: 100; }
+.u-bold           { font-weight: bold; }
+.u-italic         { font-style: italic; }
+.u-underline      { text-decoration: underline !important; }
+.u-no-underline   { text-decoration: none !important; }
+
+// text height
+.u-height--100    { line-height: 1 !important; }
+
+// text formatting
+.u-condensed      { letter-spacing: -1px; }
+.u-compressed     { letter-spacing: -2px; }
+.u-nowrap         { white-space: nowrap; }
+.u-pre-wrap       { white-space: pre-wrap; }
+.u-truncate       { @include mix-ellipsis; }
+
+// text sizing
+@each $scale, $value in $modularscales {
+    /* uncss:ignore */
+    [data-font-size="#{$scale}"] {
+        @if( ($scale - 3) < -3 ) {
+            font-size: rem($scale) !important;
+        } @else {
+            font-size: responsive rem(($scale - 3)) rem($scale) !important;
+            font-range: breakpoint(xs, max) breakpoint(xl);
+        }
+    }
+}

@@ -1,0 +1,29 @@
+.container,
+.container-fluid {
+    max-width: 100%;
+}
+
+.container {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.row {
+
+    &.has-no-gutter {
+        margin: 0;
+
+        > [class^='col-'] {
+            padding: 0;
+        }
+    }
+}
+
+@each $breakpoint in map-keys($ARbreakpoints) {
+    @include min-screen(breakpoint($breakpoint, min)) {
+        .stretch-#{$breakpoint} {
+            display: flex;
+            align-items: stretch;
+        }
+    }
+}

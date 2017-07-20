@@ -1,0 +1,25 @@
+.site-footer {
+    padding: rem(6) rem(0);
+
+    background-color: palette(gray, xx-dark);
+
+    &, a {
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+.sponsor-logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    .ojai-sponsor-logo {
+        width: calc(10% - rem(2));
+        margin: rem(1);
+    }
+    .ojai-sponsor-logo--larger {
+        height: rem(6);
+    }
+}

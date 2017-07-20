@@ -1,0 +1,44 @@
+.hero {
+    @include max-screen(breakpoint(xs, max)) {
+        // height: 80vh;
+        // max-height: 640px;
+    }
+
+    @include min-screen(breakpoint(sm)) {
+        // min-height: 480px;
+    }
+
+    @include min-screen(breakpoint(md)) {
+
+    }
+
+    @include min-screen(breakpoint(lg)) {
+
+    }
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero__image {
+    height: 55vh;
+    max-height: 55vh;
+    background-position: center;
+    background-size: cover;
+}
+
+.hero__heading {
+
+    margin: 0;
+
+    @include max-screen(breakpoint(xs, max)) {
+        // margin-bottom: rem(7);
+        text-align: center;
+    }
+    @include min-screen(breakpoint(sm)) {
+        // margin-top: rem(6);
+        margin-bottom: rem(5);
+        text-align: center;
+    }
+}

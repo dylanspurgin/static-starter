@@ -1,0 +1,78 @@
+.modal__toggle {
+    display: none;
+}
+
+.modal {
+    // background overlay
+    position: fixed;
+    overflow: scroll;
+    z-index: z-index(modal);
+    top: 0;
+    left: 0;
+    width: 100vw;
+    min-height: 100vh;
+    padding-bottom: rem(0); // same as margin-bottom on .u-modal__panel
+    background-color: rgba(black, 0.65);
+    // center the panel
+    align-items: flex-start;
+    justify-content: center;
+    // hide
+    display: none;
+    // show
+    @at-root #{&}__toggle:checked + & {
+        display: flex;
+    }
+}
+
+.modal__panel {
+    background-color: white;
+    max-height: 80vh;
+    overflow: scroll;
+
+    @include max-screen(breakpoint(xs, max)) {
+        position: absolute;
+        top: rem(0);
+        left: rem(0);
+        right: rem(0);
+        padding: rem(0);
+        margin-bottom: rem(0); // same as padding-bottom on .u-modal
+    }
+    @include min-screen(breakpoint(sm)) {
+        flex: 1 1 auto;
+        position: relative;
+        max-width: 600px;
+        min-width: 320px;
+        margin-top: rem(6);
+        padding: rem(6);
+    }
+
+    .ar-button {
+        margin-top: rem(4);
+    }
+
+    li {
+        text-align: left;
+    }
+}
+
+.modal__close-button {
+    cursor: pointer;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    width: rem(6);
+    height: rem(6);
+    line-height: rem(6);
+    white-space: nowrap;
+    text-align: center;
+
+    color: rgba(black, 0.35);
+    font-size: rem(4);
+    border-radius: 6px;
+
+    &:hover {
+        color: black;
+    }
+}

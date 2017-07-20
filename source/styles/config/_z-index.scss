@@ -1,0 +1,10 @@
+$MWzindexes: (
+    modal:              9000,
+    menu-button-mobile: 3000,
+    site-nav-mobile:    2000,
+    site-nav:           1000
+);
+
+@function z-index($index) {
+    @return map-get($MWzindexes, $index);
+}

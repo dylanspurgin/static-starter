@@ -1,0 +1,21 @@
+.u-float {
+    &--right { float: right !important; }
+    &--left  { float: left !important; }
+    &--none  { float: none !important; }
+}
+
+.u-clear {
+    &--right { clear: right !important; }
+    &--left  { clear: left !important; }
+    &--none  { clear: none !important; }
+}
+
+.u-clearfix { @include mix-clearfix; }
+.u-block        { display: block; }
+.u-inline-block { display: inline-block; }
+
+@each $breakpoint in map-keys($ARbreakpoints) {
+    @include screen(breakpoint($breakpoint, min), breakpoint($breakpoint, max)) {
+        .u-hidden--#{$breakpoint} { display: none !important; }
+    }
+}

@@ -1,0 +1,163 @@
+<header class="site-nav__wrapper js-stickyNav">
+
+    <nav class="site-nav full site-nav-desktop  container">
+        <a class="site-nav__logo" href="/">
+            <img src="/images/logo.png" alt="{{{logoAlt}}}">
+        </a>
+
+        <ul class="site-nav__links">
+            {{#each nav}}
+            <li class="nav-item first has-mega-nav">
+                <span class="border"></span>
+                {{#if subnav}}
+                <span class="label">{{{name}}}</span>
+                <section class="mega-nav dark" style="height: 399px;">
+                    <div class="mega-nav-wrap content-area">
+                        <ul class="main-list mega-nav-list clearfix">
+                            {{#each subnav}}
+                            <li class="list first clearfix">
+                                <h2 class="label">
+                                    <a href="{{{link}}}">{{{name}}}</a>
+                                </h2>
+                                {{#if subnav}}
+                                <ul class="list-wrap">
+                                    {{#each subnav}}
+                                    <li class="list-item one-column"><a class="item" href="{{{link}}}">{{{name}}}</a></li>
+                                    {{/each}}
+                                </ul>
+                                {{/if}}
+                            </li>
+                            {{/each}}
+                        </ul>
+                    </div>
+                </section>
+                {{/if}}
+                {{#if link}}
+                <a class="label" href="{{{link}}}">{{{name}}}</a>
+                {{/if}}
+            </li>
+            {{/each}}
+        </ul>
+    </nav>
+
+
+    <!-- Mobile navigation -->
+    <nav class="compact site-nav site-nav-mobile bordered dark">
+        <a class="site-nav__logo" href="https://kammok.com/">
+            <img alt="Kammok logo" src="/images/logo.png" alt="Adventure grade and better made. Kammok creates high performance gear to take your adventures to new heights. Camping hammocks, shelters, insulation, and more.">
+        </a>
+        <ul>
+            <li class="nav-item dropdown dropdown-target" data-dropdown="mobile-dropdown-1">
+                <div><span class="hamburger-icon">&#9776;</span></div>
+            </li>
+        </ul>
+
+        <section class="mobile-dropdown mobile-dropdown-1 hide dark">
+          <ul class="list primary">
+              <li class="list-item first  dropdown">
+                <a href="https://kammok.com/" class="dropdown-target" data-dropdown="shop-dropdown">Shop<span class="icon">></span></a>
+                  <ul class="list secondary shop-dropdown hide">
+                      <li class="list-item dropdown">
+                        <a href="https://kammok.com" class="dropdown-target" data-dropdown="hammocks-dropdown">Hammocks<span class="icon">></span></a>
+                        <button class="mobile-nav--see-all-button" data-category-name="Hammocks">SEE ALL</button>
+                        <ul class="list tertiary hammocks-dropdown hide">
+                            <li class="list-item ">
+                              <a href="https://kammok.com/products/roo">Roo Double Hammock</a>
+                            </li>
+                            <li class="list-item ">
+                              <a href="https://kammok.com/products/earth-day-roo">Roo Double Hammock - Earth Day Limited Edition</a>
+                            </li>
+                            <li class="list-item ">
+                              <a href="https://kammok.com/products/wallaby">Wallaby Single Hammock</a>
+                            </li>
+                            <li class="list-item ">
+                              <a href="https://kammok.com/products/flag-hammock">Wallaby Single Hammock - Flag Limited Edition</a>
+                            </li>
+                            <li class="list-item ">
+                              <a href="https://kammok.com/products/python-straps">Python Straps</a>
+                            </li>
+                            <li class="list-item ">
+                              <a href="https://kammok.com/collections/hammocks">See All</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="list-item dropdown">
+                        <a href="" class="dropdown-target" data-dropdown="shelters-dropdown">Shelters<span class="icon">></span></a>
+                        <button class="mobile-nav--see-all-button" data-category-name="Shelters">SEE ALL</button>
+                        <ul class="list tertiary shelters-dropdown hide">
+                            <li class="list-item ">
+                              <a href="https://kammok.com/products/sunda">Sunda 2P+ Tent + All-In-One Hammock</a>
+                            </li>
+                            <li class="list-item ">
+                              <a href="https://kammok.com/collections/sunda-accessories">Sunda Accessories</a>
+                            </li>
+                            <li class="list-item ">
+                              <a href="https://kammok.com/products/kuhli">Kuhli Weather Shelter</a>
+                            </li>
+                            <li class="list-item ">
+                              <a href="https://kammok.com/products/dragonfly">Dragonfly Insect Net</a>
+                            </li>
+                            <li class="list-item ">
+                              <a href="https://kammok.com/products/glider">Glider Weather Shelter</a>
+                            </li>
+                            <li class="list-item ">
+                              <a href="https://kammok.com/collections/shelters">See All</a>
+                            </li>
+                        </ul>
+                      </li>
+                      <li class="list-item dropdown">
+                        <a href="" class="dropdown-target" data-dropdown="insulation-dropdown">Insulation<span class="icon">></span></a>
+                        <button class="mobile-nav--see-all-button" data-category-name="Insulation">SEE ALL</button>
+                        <ul class="list tertiary hide insulation-dropdown">
+                            <li class="list-item ">
+                              <a href="https://kammok.com/products/thylacine">Thylacine Sleeping Bag</a>
+                            </li>
+                            <li class="list-item ">
+                              <a href="https://kammok.com/products/firebelly">Firebelly Trail Quilt</a>
+                            </li>
+                            <li class="list-item ">
+                              <a href="https://kammok.com/products/koala">Koala Under Quilt</a>
+                            </li>
+                            <li class="list-item ">
+                              <a href="https://kammok.com/collections/insulation">See All</a>
+                            </li>
+                        </ul>
+                      </li>
+                  </ul>
+              </li>
+              <li class="list-item   dropdown">
+                <a href="/" class="dropdown-target" data-dropdown="inspo-dropdown">Inspiration<span class="icon">></span></a>
+                  <ul class="list secondary inspo-dropdown hide">
+                      <li class="list-item ">
+                        <a href="https://kammok.com/pages/mission">Mission</a>
+                      </li>
+                      <li class="list-item ">
+                        <a href="https://kammok.com/pages/give-adventure">Impact</a>
+                      </li>
+                      <li class="list-item ">
+                        <a href="https://kammok.com/pages/mob">The MOB</a>
+                      </li>
+                      <li class="list-item ">
+                        <a href="http://blog.kammok.com">Blog</a>
+                      </li>
+                  </ul>
+              </li>
+              <li class="list-item last dropdown">
+                <a href="/"  class="dropdown-target" data-dropdown="support-dropdown">Support<span class="icon">></span></a>
+                  <ul class="list secondary support-dropdown hide">
+                      <li class="list-item ">
+                        <a href="https://kammok.com/pages/mob-support">FAQ</a>
+                      </li>
+                      <li class="list-item ">
+                        <a href="https://kammok.com/pages/warranty-satisfaction">Register</a>
+                      </li>
+                      <li class="list-item ">
+                        <a href="https://kammok.com/pages/contact-us">Contact Us</a>
+                      </li>
+                  </ul>
+              </li>
+            <li class="list-item" id="coin-container"></li>
+          </ul>
+        </section>
+    </nav>
+</header>

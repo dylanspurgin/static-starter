@@ -1,0 +1,38 @@
+<form
+    name="enter-form"
+    id="email_signup"
+    action="//manage.kmail-lists.com/subscriptions/subscribe"
+    data-ajax-submit="//manage.kmail-lists.com/ajax/subscriptions/subscribe"
+    method="GET"
+    class="js-form klaviyo_bare_embed_LduSzZ">
+    <input type="hidden" name="g" value="LduSzZ">
+    <input
+        type="text"
+        name="email"
+        class="ojai-input signup-input"
+        required
+        placeholder="{{{enterFormEmailInputPlaceholder}}}">
+    <input
+        type="number"
+        name="zip"
+        class="ojai-input signup-input"
+        required
+        placeholder="{{{enterFormZipInputPlaceholder}}}">
+    <section class="ojai-input-group">
+        <input
+            type="checkbox"
+            name="terms"
+            required
+            id="terms-checkbox"><label class="ojai-input-group__label" for="terms-checkbox" data-font-size="-2">I have read the <a href="#" class="ojai-modal-target" data-modal-target="ojai-terms-modal">{{{enterFormTermsLinkText}}}</a></label>
+    </section>
+    <div class="klaviyo_messages">
+        <div class="success_message" style="display:none;"></div>
+        <div class="error_message" style="display:none;"></div>
+    </div>
+    <button type="submit" class="ojai-button u-uppercase u-margin--top"><span>{{{enterFormButtonText}}}</span></button>
+</form>
+<section class="ojai-form-success">
+    {{{enterFormSuccessMessage}}}
+</section>
+<ul class="ojai-form-error"></ul>
+<p data-font-size="-1">{{{enterFormEndDateText}}}</p>
